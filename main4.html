@@ -1,0 +1,317 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Part4 鉴</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/jquery.fatNav.css" rel="stylesheet" type="text/css">
+	<style>
+		html,
+		body {
+			height: 100%;
+		}
+
+		h1,
+		h2 {
+			font-weight: normal;
+		}
+
+		body {
+			padding: 0;
+			margin: 0;
+			margin: 0 auto;
+			max-width: 640px;
+			min-width: 300px;
+			font-family: "微软雅黑", "黑体", "宋体";
+		}
+		.section4-top{
+			background-image: url(images/ditu.jpg);
+		}
+		#top {
+			height: 100%;
+			background-image: url(images/top-v.jpg);
+			background-size: cover;
+			position: relative;
+		}
+
+		section {
+			padding: 0 10px;
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 1.5;
+		}
+
+		section img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		section video {
+			max-width: 100%;
+			height: auto;
+		}
+
+		#nav {
+			width: 30px;
+			height: 30px;
+			box-sizing: border-box;
+			background-color: #666;
+			border-radius: 50%;
+			position: fixed;
+			right: 15px;
+			bottom: 10px;
+			z-index: 999;
+		}
+
+		.chapter {
+			width: 100%;
+			margin: 0 auto;
+			padding-top: 20px;
+
+		}
+
+		h2 {
+			font-family: "微软雅黑", "黑体", "宋体";
+			font-size: 30px;
+			color: rgb(29, 106, 84);
+			letter-spacing: 0.5em;
+			text-indent: 0.5em;
+			font-weight: lighter;
+		}
+
+		.fancy-header {
+			width: 100%;
+			margin: 30px 0 20px;
+			position: relative;
+			clear: both;
+			display: block;
+			z-index: 1;
+			text-align: center;
+		}
+
+		.fancy-header:after {
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 0;
+			border-bottom: 1px solid #e8e8e8;
+			left: 0;
+			top: 50%;
+			z-index: -1;
+		}
+
+		.fancy-header span {
+			font-size: 11px;
+			padding: 5px 10px;
+			background: #ffffff;
+			border-radius: 2px;
+			position: relative;
+			display: inline-block;
+			font-family: 'HelveticaNeue Light', Helvetica, Arial, sans-serif;
+			border: 1px solid #e8e8e8;
+		}
+
+		.fancy-header2 {
+			margin-bottom: 30px;
+			text-align: center;
+			font-family: "微软雅黑";
+			padding-top: 2px;
+		}
+		.part {
+
+padding-bottom: 20px;
+}
+.clearfix:after {
+			content: ".";
+			display: block;
+			height: 0;
+			visibility: hidden;
+			clear: both;
+		}
+		.block {
+			background: #DDD;
+			margin-top: 10px;
+			padding: 8px;
+		}
+
+		.block-desc {
+			font-size: 12px;
+		}
+		#jisui {
+			margin: 0, auto;
+		}
+
+		#bisai {
+			margin: 0, auto;
+		}
+
+		.wgleft {
+			float: left;
+			width: 70%;
+			margin-right: 5%;
+		}
+
+		.wgright {
+			float: right;
+			width:25%;
+			margin-top: 25px;
+		}
+		.wgleft{
+			float:left;
+			width:70%;
+			margin-right:5%
+		}
+
+		#footer {
+			width: 100%;
+			background-image: url(images/bg2.jpg);
+			padding-top: 5px;
+			padding-bottom: 30px;
+
+		}
+
+		#footer p {
+			font-size: 13px;
+			letter-spacing: 0.1em;
+			color: rgb(0, 0, 0);
+			padding-top: 25px;
+			text-align: center;
+			line-height: 2.5em;
+		}
+
+		#footer a:link {
+			color: rgb(0, 0, 0);
+			text-decoration: none
+		}
+
+		#footer a:visited {
+			color: rgb(0, 0, 0);
+			text-decoration: none
+		}
+
+		#footer a:hover {
+			color: rgb(0, 0, 0);
+			text-decoration: underline;
+		}
+
+		#footer a:active {
+			color: rgb(0, 0, 0);
+			text-decoration: underline;
+		}
+		.clearfix{
+			width:100%;
+			margin-top: 50px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+
+	<section>
+
+		<div class="section4-top">
+					<div class="caption" >
+						<div class="part"><img src="images/jian.png" width="180px">
+							<div id="line-left" ></div>
+							<div id="line-right" ></div>
+						</div>
+					</div>
+		</div>
+
+		<div class="chapter">
+			<div class="fancy-header">
+				<span>Chapter 1</span>
+			</div>
+			<div class="fancy-header2">
+				<h2>日本青训</h2>
+			</div>
+		</div>
+
+		<div class="section">
+				<p>中日青训几乎同一时间起步，到如今的成果却天差地别。近年来，中国俱乐部、学校青训队大比分输给外国青年队的新闻层出不穷。人们在感叹足球水平的差距时，也在思考：中国青训的问题出在哪里？带着这个问题，河北华夏幸福俱乐部调查了队内青训球员和日本川崎前锋队的青训队员，得到了这样的结果。</p>
+				<div id="jisui" data-aos="fade-up">
+					<img src="images/jisui.png">
+				</div>
+				<div id="bisai" data-aos="fade-up">
+					<img src="images/bisai.png">
+				</div>
+				<p>而当问及“你为什么踢足球”时，中国小球员的回答大多是“喜欢运动，喜欢足球”，而日本小球员的答案是“受父亲、哥哥的影响”。这说明日本的足球人口数量庞大，足球氛围更浓，更能激励孩子去投身足球运动中。</p>
+				<p>日本足球人口数量的优势，很大程度上要归功于日本高中足球联赛。日本高中足球联赛全称为“日本高等学校足球选手权大会”，顾名思义，在联赛中表现好的高中球员，可以通过这个舞台展现自己，获得职业队伸出的橄榄枝。早年的川口能活、中村俊辅、中田英寿，近年的本田圭佑、浅野拓磨等等，都是从高中联赛走出去的球星。</p>
+				<div class="clearfix">
+					<div class="wgleft">
+						
+						<p>只不过，这些人并非真的仅依靠天赋就能获得职业俱乐部的垂青，他们往往从小就一边完成学业一边接受专业青训，或者从青训队淘汰下来之后入读高中。</p>
+						<p>对比中国青少年职业联赛，中国的确有一个“中国高中足球联赛”，效仿日本从各县挑选出48支球队，中国分为四个大区，每区16队，共64队，看似比较合理。但日本参赛的48支球队，是在本县内经过淘汰赛重重选拔脱颖而出的，实际参加预选赛的超过2000支球队。而中国高中足球联赛的报名规程写道：“如果参赛队数不足16支，承办赛区单位（或省市）可优先递补一支球队。如还不足，则依据上届联赛分区赛名次靠前球队所在省市依次递补。”然而在2016年，东南区仍只有12只球队参赛，这说明高中参加联赛的意愿不高，联赛面临着尴尬的境地。“中国高中足球联赛”的官方微博，也仅有453人关注，相比日高联赛动辄四万的上座率，足球人口的差距也由此体现出来。</p>
+					</div>
+					<div class="wgright">
+						<img src="images/btgy.jpg" width="200px">
+						<div class="biaozhu" witdh="200px" style="text-align: center">本田圭佑</div>
+						<img src="images/qytm.jpg" width="200px" style="margin-top: 20px">
+						<div class="biaozhu" witdh="200px" style="text-align: center">浅野拓磨</div>
+					</div>
+					
+				</div>
+			</div>
+		
+			<div class="chapter">
+				<div class="fancy-header">
+					<span>Chapter 2</span>
+				</div>
+				<div class="fancy-header2">
+					<h2>德国青训</h2>
+				</div>
+			</div>
+		
+			<div class="section" style="margin-bottom: 30px">
+				<p>2000年欧洲杯小组赛出局，令德国人意识到青黄不接的危机。于是，为了培养接班德国足球的青年人才，德国人在原有的青训基础上进行了完善。</p>
+				<img src="images/germanlose.jpg" width="900px">
+				<p>他们采取“俱乐部青训+足协青训”的模式，制定了《德国足协青少年发展计划》，并投入1亿欧元在全国设立了366个德国足协精英中心。精英中心的任务就是发现和挖掘当地有潜力的年轻球员，并让他们每周一天进行科学的足球训练。在精英中心接受训练的1.4万名年龄在11岁到14岁之间的小球员之中有天赋的选手，会被精英中心送至国内各职业俱乐部的梯队进行青训。依靠这一系统，根据2017年德国足协最新公布的数字，德国最新的男、女注册球员总数为704.3万人，相当于德国每11个人当中就有一位注册球员，其中青少年球员超过了180万。除了精英中心之外，
+					46所青少年足球运动中心，29所足球精英学校和108514支青年球队都为热爱足球的德国青少年提供了踢球的场所。
+				</p>
+				<img src="images/jzthe.jpg" width="900px" data-aos="zoom-in">
+				<div class="biaozhu" witdh="100%" style="text-align: center">德国足协-青少年发展计划</div>
+				<div class="clearfix" >
+					<div class="wgleft">
+						德国的职业俱乐部也各自建立了不同年龄层次的梯队，以2016-2017赛季异军突起的RB莱比锡队为例，队内构建了从U8到U23之间的12支年龄层梯队。梯队的教练通常选择退役不久、希望走上教练道路的老将，他们丰富的经验会帮助球员成长。U23队目前在德甲第四级别联赛，还有诸多梯队分布在德国北部至莱比锡市的各级联赛中。除莱比锡队以外，其他球队的青年梯队也参与到半职业联赛和业余联赛中练级。2017年中国U20队曾希望参加德国第四级别联赛，就是看准了和同一年龄层次球员的竞技机会，只可惜最终未能成行。
+					</div>
+					<div class="wgright">
+						<img src="images/RB.png" width="200px">
+					</div>
+				</div>
+					<p>由于拥有庞大的足球人口，能够成为职业球员的人有限，所以在德国足球人才的竞争相较于中国，压力只大不小。所以德国青训从未忽视对青年球员文化课的教育，在俱乐部梯队，小球员从12岁起，每周有四次常规训练，但是俱乐部要求他们每周必须完成30至34个小时的文化课学习。今年23岁的德国未来之星基米希，高中毕业就拿到了1.7的高分，换算成中国的高考分数，相当于585分左右。他们的学习时间是从哪里来的？德国的校园生活没有中国那么紧张，德国学生的下午通常有充足的课余时间，这让他们可以在兼顾学业的前提下发展自己的足球爱好。</p>
+					<p>面对如此繁荣的青训体系，让德甲联赛以25.99岁的平均年龄，成为英西法德意五大联赛中平均年龄最小的联赛。</p>
+					<p>面对人才井喷的局面，难怪前沙尔克04体育主管黑尔特这样感慨：“既然自己就能培养出身价3000万的德拉克斯勒，为什么还要去转会市场买呢？”</p>
+			</div>
+
+			<div id="footer">
+				<p>特别鸣谢丨
+					<a href="http://www.fcguoan.com/" target="blank">北京中赫国安足球俱乐部</a>
+					<a href="http://www.nlsyz.com.cn/niulanshan/" target="blank">北京市牛栏山一中实验学校</a>
+					<br> 中国传媒大学新闻传播学部电视学院 顾洁老师
+					<br> 中国传媒大学计算机与网络中心 王海波老师 张伟娜老师
+					<br>采访拍摄撰稿丨王奇悦 张天放 任雨萌
+					<br>网页设计丨宁雪琪 任雨萌&nbsp;&nbsp;&nbsp; H5制作丨申珊
+					<br>© 2018 中国传媒大学新闻传播学部电视学院</p>
+			</div>
+
+	</section>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fatNav.js"></script>
+
+	<script>        
+		var mySwiper = new Swiper('.swiper-container', {
+			// If we need pagination
+			pagination: '.swiper-pagination',
+		})
+
+		$.fatNav();    
+	</script>
+</body>
+
+</html>

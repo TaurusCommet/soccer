@@ -1,0 +1,445 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Part2 学</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+	<link href="css/jquery.fatNav.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/skippr.css">
+
+	
+	<style>
+		html,
+		body {
+			height: 100%;
+		}
+		.p{
+			font-size: "微软雅黑", "黑体", "宋体";
+			line-height: 2;
+		}
+		.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+		h1,
+		h2 {
+			font-weight: normal;
+		}
+
+		body {
+			padding: 0;
+			margin: 0;
+			margin: 0 auto;
+			max-width: 640px;
+			min-width: 300px;
+			font-family: "微软雅黑", "黑体", "宋体";
+			line-height: 3;
+		}
+		.section2-top{
+			background-image: url(images/ditu.jpg);
+		}
+		.part{
+			padding-bottom: 30px;
+		}
+
+		#arrow {
+			position: absolute;
+			bottom: 5%;
+			left: 50%;
+			margin: 0 0 0 -10px;
+		}
+
+		section {
+			padding: 0 10px;
+			margin: 0 auto;
+			line-height: 2;
+			background-color: #FFF;
+			overflow: hidden;
+		}
+		.row {
+			margin-bottom: 20px;
+			overflow: hidden;
+		}
+
+		.row:before,
+		.row:after {
+			content: '\0020';
+			display: block;
+			overflow: hidden;
+			visibility: hidden;
+			width: 0;
+			height: 0;
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 1.5;
+		}
+
+		section img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		section video {
+			max-width: 100%;
+			height: auto;
+		}
+
+		.swiper-container {
+			width: 100%;
+			height: 100%;
+		}
+		.chapter{
+            width:100%;
+            margin:0 auto;
+         padding-top:20px;
+		}
+		h2 {
+        font-family: "微软雅黑","黑体","宋体";
+        font-size: 30px;
+        color:rgb(29,106,84);
+		letter-spacing: 0.5em;
+		text-indent: 0.5em;
+		font-weight: lighter;
+        }
+        .fancy-header {
+        width: 100%;
+        margin: 30px 0 20px;
+        position: relative;
+        clear: both;
+        display: block;
+        z-index: 1;
+        text-align: center;
+        }
+        .fancy-header:after {
+         position: absolute;
+        content: '';
+        width: 100%;
+        height: 0;
+        border-bottom: 1px solid #e8e8e8;
+        left: 0;
+        top: 50%;
+        z-index: -1;
+        }
+        .fancy-header span {
+        font-size: 11px;
+         padding: 5px 10px;
+        background: #ffffff;
+        border-radius: 2px;
+        position: relative;
+        display: inline-block;
+        font-family: 'HelveticaNeue Light', Helvetica, Arial, sans-serif;
+        border: 1px solid #e8e8e8;
+        }
+        .fancy-header2 {
+        margin-bottom: 30px;
+	    text-align: center;
+        font-family: "微软雅黑";
+		padding-top:2px;
+        }
+
+		#row yingyulaoshi{
+			width:100%;
+			margin-bottom: 5%;
+			float:left;
+		}
+		
+		.text {
+    width: 100%;
+    margin-right: 50px;
+}
+.biaozhu{
+	color:grey;
+	font-weight: normal;
+	font-size: 14px;
+    display: block;
+	padding-top: 10px;
+	text-align: center;
+}
+
+.slider-wrapper{
+	width:100%;
+	height: 300px;
+
+}
+.slider-wrapper2{
+	width:100%;
+	height:350px;
+	margin-top: 25px;
+}
+.one_half{
+    position: relative;
+	width:60%;
+	margin-right:5%;
+    float: left;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.last{
+	float:right;
+	width:35%;
+	height:100%;
+	margin-right:0;
+	margin-top:12%;
+	margin-bottom:60px;
+	padding:auto 0;
+	text-align: center;
+}
+.line{
+	line-height: 1
+}
+blockquote {
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+blockquote p {
+    margin: 0 !important;
+    padding: 7px 0 5px 25px;
+    border-left: 4px solid rgb(29,106,84);
+	color: grey;
+    line-height: 2;
+	
+}
+#fanshu{
+	float: left;
+	width:47%;
+	overflow: hidden;
+
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+
+#zhuanbi{
+	float: right;
+	width:47%;
+
+	overflow: hidden;
+	margin-bottom: 50px;
+	margin-top: 20px;
+}
+.youduiqi {
+			text-align: right;
+		}
+
+		#meixi {
+			margin-top: 0px;
+			text-align: center;
+		}
+
+		.video-js {
+			font-size: 10px;
+			color: #fff;
+		}
+
+
+		.vjs-default-skin .vjs-big-play-button {
+			font-size: 3em;
+			line-height: 2em;
+			height: 2em;
+			width: 2em;
+			border: 0.06666em solid #fff;
+			border-radius: 50%;
+			left: 50%;
+			top: 50%;
+			margin-left: -1em;
+			margin-top: -1em;
+		}
+
+		.video-js .vjs-control-bar,
+		.video-js .vjs-big-play-button,
+		.video-js .vjs-menu-button .vjs-menu-content {
+			background-color: #2B333F;
+			background-color: rgba(43, 51, 63, 0.7);
+		}
+
+		.video-js .vjs-slider {
+			background-color: #73859f;
+			background-color: rgba(115, 133, 159, 0.5);
+		}
+
+		.video-js .vjs-volume-level,
+		.video-js .vjs-play-progress,
+		.video-js .vjs-slider-bar {
+			background: #fff;
+		}
+
+		.video-js .vjs-load-progress {
+			background: #bfc7d3;
+			background: rgba(115, 133, 159, 0.5);
+		}
+
+		.video-js .vjs-load-progress div {
+			background: white;
+			background: rgba(115, 133, 159, 0.75);
+		}
+
+	</style>
+
+</head>
+
+<body>
+	
+	<section>
+			<div class="section2-top">
+					<div class="caption" >
+						<div class="part"><img src="images/xue.png" width="180px">
+							<div id="line-left" ></div>
+							<div id="line-right" ></div>
+						</div>
+					</div>
+			</div>
+
+			<div class="chapter">
+					<div class="fancy-header"><span>Chapter 1</span></div>
+					<div class="fancy-header2">
+					<h2>资源共享</h2>
+					</div>
+				</div>
+			
+		
+			<div class="section">
+				<p>走在牛栏山一中实验学校的校园里，绿色的国安队服与长年训练馈赠的黝黑肤色让国安班的学生显得格外突出。在这里，U16梯队的队员们被分入中赫国安1班和中赫国安2班两个班级，学习初三年级的语文、数学、英语、物理、政治、历史六门课程。</p>
+				
+				<p>谈及国安与学校合作的原因，牛栏山一中实验学校德育处主任李海宝老师将其总结为“资源共享”：“国安需要我们的优质资源来为球员提供文化教育，学校也需要国安的优质资源来发展校园足球，双方因此一拍即合。”</p>
+				
+				
+		
+		
+						<div id="pic2"  data-aos="fade-left" class="pic ">					
+							<div class="slider-wrapper">
+									<div class="slider">
+										<div style="background-image: url(images/changguan1.jpg)"></div>
+										<div style="background-image: url(images/changguan2.jpg)"></div>
+										<div style="background-image: url(images/changguan3.jpg)"></div>
+										<div style="background-image: url(images/changguan4.jpg)"></div>
+									</div>    
+								</div>
+								<div class="biaozhu">北京中赫国安足球俱乐部顺义训练基地</div>
+						</div>
+				</div>
+
+				<div id="1-2" class="clearfix">
+						<div id="text1-2" class="text">
+							<p>学校足球队主教练韩泽山老师认为国安班的到来给校队带来了很大帮助：“尽管由于一些场地的限制，我们（校队和国安梯队）平时不能在一起训练，但是双方可以比赛。通过比赛，我们校队的队员也从国安的小队员身上学到了许多，技战术的配合、在球场上的意识以及在球场上的团结性都有所提升。”此外，在寒暑假期间，牛栏山一中实验学校校足球队的队员还可以前往中赫国安基地，与国安的青训梯队一同训练。 </p>
+						</div>
+		
+		
+							<div  class="pic" >
+									<div class="slider-wrapper2">
+											<div class="slider ">
+												<div style="background-image: url(images/xuexiao1.png)"></div>
+												<div style="background-image: url(images/xuexiao2.jpg)"></div>
+												<div style="background-image: url(images/xuexiao3.jpg)"></div>
+												<div style="background-image: url(images/xuexiao4.jpg)"></div>
+											</div> 
+									</div>   
+							<div class="biaozhu">牛栏山一中</div>
+						</div>
+				</div>
+
+				<div id="1-3" class="clearfix">
+						<div id="text1-2" class="text">
+						<p>从中获益的不仅是校队，“国安班”的到来也让这所本就以校园足球而闻名的学校有了更加浓厚足球氛围。同学们参与班级联赛、校级联赛的积极性更高了，李海宝老师也提到，学校计划在下一年的校园足球联赛中将“国安班”学生打散编入普通班级，让普通学生真正获得与高水平球员交流技艺的机会。</p>
+						<p>而到名校读书、过与同龄人一样的校园生活，也是中赫国安梯队的小球员此前未曾想象过的。刘石开之前在体校就读，普通中学生井井有条的作息规律与牛一实验优美的校园环境都让他感到兴奋：“作息比在体校时更有规律，校园环境也好了太多。”
+							 </p>
+						</div>
+			</div>	
+				<div class="chapter">
+					<div class="fancy-header"><span>Chapter 2</span></div>
+					<div class="fancy-header2">
+					<h2>喜忧参半</h2>
+					</div>
+				</div>
+		
+		
+		
+			<div class="section">
+				<p>如果说“体教结合，全面育人”是美好的理想，那么学生程度参差不齐、学习欲望难如人意便是“国安班”略显尴尬的现实。</p>
+					<p>“和普通班级的学生相比，‘国安班’的学生沟通能力更强，性格也比较好，”负责“国安班”数学教学的赵贺锋老师说道，“但是学生的接受能力、学习欲望的确差异很大。”
+					</p>
+				<p><div class="jinqiu"><video  width="900"  class="video-js vjs-default-skin video-scrollplay" controls data-setup="{}">
+						<source src="video/shuxueke.mp4" type="video/mp4">
+					  </video></div></p>
+				<p>中赫国安U16梯队的队员年龄不一，进队前的学习水平也并不一致，同在一个班级的学生，有的已经完成了初中课程的学习，有的文化程度还停留在初一水平，这也给老师的授课带来了很大难度。</p>
+				<p>	“一节课，如果能让所有的学生都听明白了，这节课的课程设置上面会困难特别大，”赵老师坦言，学生的整体水平让他无法按照原先计划讲授初三内容，“后来我调整了计划，从初一的内容，甚至从六年级的内容拉出来一部分开始讲，慢慢地加大难度，这样，跟着老师走的学生也越来越多。”</p>
+				<p>与数学老师降低难度、循序渐进的方法不同，英语老师林荣吸引学生兴趣的方法是把课程内容与足球结合起来，最大程度地贴近“国安班”的日常生活和运用需要。</p>
+				
+				
+				
+				<div class="row yingyulaoshi">
+					<div class="one_half"><blockquote><p>“我们为‘国安班’专门研发开设了一门英语听说课，讲授和足球相关的英语。”林荣老师说，“有一次我在课上放了一个足球视频，孩子们看了马上就指出‘老师，你这个视频不对，现在足球不这样踢’，所以我和他们也是互相学习、教学相长。”</p>
+						<p class="youduiqi">——林荣 | 牛栏山一中英语老师</p>
+					</blockquote></div>
+					<div class="one_half last" id="yingyulaoshi" data-aos="fade-left" aos-duration:"8000">
+						<img src="images/yingyulaoshi.png">
+					</div>
+				</div>
+				<div id="line"></div>
+			
+			<div><p>比起教学内容上的调整，更难的是让学生转变观念。一些学生之前长期忽视文化课导致基础不牢而丧失了学习的热情，还有一些学生笃定了日后要从事足球而认为“学习无用”，面对这样的情况，老师们也用尽了心思，希望把孩子们带回课堂。经过近一年的努力，老师们的工作初见成效，有越来越多的学生能够“坐得住、听得进”，渐渐懂得了学习的意义。</p><p>苏铮认为文化教育肯定能让他们变得更充实：“语文的学习，英语的学习，不管是在国内国外，还是场上场下，都能让我们沟通得更好。数学能开阔我们的思维。足球除了是用脚踢，其实实际上是在用脑子踢。”</p></div>
+				<div id="fanshu"><video   class="video-js vjs-default-skin video-scrollplay" controls muted loop data-setup="{}">
+					<source src="video/fanshu.mp4" type="video/mp4">
+				  </video></div>
+				<div id="zhuanbi"><video  class="video-js vjs-default-skin video-scrollplay" controls muted loop data-setup="{}">
+					<source src="video/zhuanbi.mp4" type="video/mp4">
+				  </video></div>
+		
+			</div>
+		
+			<div class="chapter">
+				<div class="fancy-header"><span>Chapter 3</span></div>
+				<div class="fancy-header2">
+				<h2>“梅西和他的小伙伴”</h2>
+				</div>
+			</div>
+		
+			<div class="section">
+				<p>“足球是和平年代的战争。”翟指一语道破了足球的残酷。这种残酷不仅体现在足球场上的激烈拼抢中，更体现在职业球员极高的淘汰率上。同其他竞技项目一样，足球球员的层层选拔也遵循“金字塔”规律，队员们即使已经进入了职业梯队、成为了同龄人中的佼佼者，最终能成为职业球员的选手仍是凤毛麟角。</p>
+				<p>目前，中赫国安俱乐部计划在一至两年后为U16梯队开设低级别的教练员培训班与医疗保障学习班，为最终未能走上球员道路的队员提供更多的职业选择。</p>
+				<p>几天前，翟指导和队员们共同观看了一部影片，讲述的是梅西和他的小伙伴的故事。在电影中有这样的一幕，令翟指导印象颇深：</p>
+			</div>
+				<div id="meixi" data-aos="flip-up" ><img src="images/meixi.png" width="800px"></div>
+		
+		
+			<div class="row zhaibiao">
+				<div class="one_half"><blockquote><p>“我也想告诉怀揣球星梦、职业球员梦的孩子们，每个人的生活是不一样的，可能你成为球星、成为职业球员的几率不多，但是你的生活还得继续，即使是成为了职业球员，足球生涯也毕竟短暂，运动员终有一天要退役、面对这个社会。所以一方面我们要为梦想努力、青春无悔，另一方面，我们也要学更多的知识，为将来做好准备。”</p>
+					<p class="youduiqi">——翟飙 | 北京中赫国安U16梯队主教练</p>
+				</blockquote></div>
+				
+					<div class="one_half last">
+						<img src="images/zhaibiao.jpg" width:"20%" data-aos="zoom-in">
+					</div>
+				
+			</div>
+
+	</section>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.fatNav.js"></script>
+	<script src="js/skippr.js"></script>
+	<script src="js/jquery.nivo.slider.pack.js"></script>
+
+	<script>        
+	$(document).ready(function () {
+			$(".slider").skippr({
+				navType: 'bubble',
+			});
+
+		});
+
+		$(document).ready(function () {x
+			$.fatNav();
+		});
+
+
+	</script>
+</body>
+
+</html>

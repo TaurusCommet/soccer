@@ -1,0 +1,517 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Part1 球</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/aos.css" type="text/css">
+	<link rel="stylesheet" href="css/skippr.css">
+	<link href="css/video-js.min.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery.js" type="text/javascript"></script>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/echarts.js"></script>
+	<script src="js/echarts.min.js"></script>
+	<script src="js/china.js"></script>
+
+	<style>
+		html,
+		body {
+			height: 100%;
+		}
+
+		.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+		h1,
+		h2 {
+			font-weight: normal;
+		}
+		.p{
+			font-size: "微软雅黑", "黑体", "宋体";
+			line-height: 2;
+		}
+
+		body {
+			padding: 0;
+			margin: 0;
+			margin: 0 auto;
+			max-width: 640px;
+			min-width: 300px;
+			font-family: "微软雅黑", "黑体", "宋体";
+		}
+
+
+		section {
+			padding: 0 10px;
+		}
+
+		p {
+			font-size: 16px;
+			line-height: 1.5;
+		}
+
+		section img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		section video {
+			max-width: 100%;
+			height: auto;
+		}
+
+	
+		#nav {
+			width: 30px;
+			height: 30px;
+			box-sizing: border-box;
+			background-color: #666;
+			border-radius: 50%;
+			position: fixed;
+			right: 15px;
+			bottom: 10px;
+		}
+		.section1-top{
+			background-image: url(images/ditu.jpg);
+		}
+		.part{
+			margin:0 auto;
+			padding-bottom: 20px;
+			background-position: center center;
+		}
+		.chapter{
+            width:100%;
+            margin:0 auto;
+         padding-top:20px;
+		}
+		h2 {
+        font-family: "微软雅黑","黑体","宋体";
+        font-size: 30px;
+        color:rgb(29,106,84);
+		letter-spacing: 0.5em;
+		text-indent: 0.5em;
+		font-weight: lighter;
+        }
+        .fancy-header {
+        width: 100%;
+        margin: 30px 0 20px;
+        position: relative;
+        clear: both;
+        display: block;
+        z-index: 1;
+        text-align: center;
+        }
+        .fancy-header:after {
+         position: absolute;
+        content: '';
+        width: 100%;
+        height: 0;
+        border-bottom: 1px solid #e8e8e8;
+        left: 0;
+        top: 50%;
+        z-index: -1;
+        }
+        .fancy-header span {
+        font-size: 11px;
+         padding: 5px 10px;
+        background: #ffffff;
+        border-radius: 2px;
+        position: relative;
+        display: inline-block;
+        font-family: 'HelveticaNeue Light', Helvetica, Arial, sans-serif;
+        border: 1px solid #e8e8e8;
+        }
+        .fancy-header2 {
+        margin-bottom: 30px;
+	    text-align: center;
+        font-family: "微软雅黑";
+		padding-top:2px;
+        }
+		.zhujiaolian{
+	float: left;
+	width:50%;
+	text-align: center;
+	padding-left:5%;
+	border-left: rgba(29,106,84,0.8) solid 3px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.shipinzi{
+	float:right;
+	color:grey;
+	width:40%;
+	padding-top: 10px;
+	line-height: 1;
+	font-size: 5px;
+}
+.shipinzi2{
+	float:left;
+	width:47%;
+	color: grey;
+	padding-left:7%;
+	border-left:#999 solid 3px;
+	margin-left: 0.5%;
+}
+.suzheng{
+	float:right;
+	width:40%;
+	height:100%;
+	padding:20px 0 0 10px;
+	margin:auto auto;
+}
+.fengge{
+			color:grey;
+		    padding-bottom: 10px;
+
+		}
+		.row {
+    margin-bottom: 20px;
+	overflow: hidden;
+}
+.row:before, .row:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+.one_half{
+    position: relative;
+	width:55%;
+    margin-bottom: 30px;
+    float: left;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.last{
+	float:right;
+	width:40%;
+	height:100%;
+	margin-right:0;
+	text-align: center;
+}
+.last2{
+	float:right;
+	width:40%;
+	height:100%;
+	margin-right:0;
+	text-align: center;
+	padding-top:30px;
+}
+.last3{
+	width:40%;
+	float:right;
+	margin-right:0;
+	padding-top: 50px;
+}
+blockquote {
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+blockquote p {
+    margin: 0 !important;
+    padding: 7px 0 5px 25px;
+    border-left: 4px solid rgb(29,106,84);
+	color: grey;
+    line-height: 2;
+	
+}
+#meixi {
+			margin-top: -30px;
+			text-align: center;
+		}
+
+		.video-js {
+			font-size: 10px;
+			color: #fff;
+		}
+
+
+		.vjs-default-skin .vjs-big-play-button {
+			font-size: 3em;
+			line-height: 2em;
+			height: 2em;
+			width: 2em;
+			border: 0.06666em solid #fff;
+			border-radius: 50%;
+			left: 50%;
+			top: 50%;
+			margin-left: -1em;
+			margin-top: -1em;
+		}
+
+		.video-js .vjs-control-bar,
+		.video-js .vjs-big-play-button,
+		.video-js .vjs-menu-button .vjs-menu-content {
+			background-color: #2B333F;
+			background-color: rgba(43, 51, 63, 0.7);
+		}
+
+		.video-js .vjs-slider {
+			background-color: #73859f;
+			background-color: rgba(115, 133, 159, 0.5);
+		}
+
+		.video-js .vjs-volume-level,
+		.video-js .vjs-play-progress,
+		.video-js .vjs-slider-bar {
+			background: #fff;
+		}
+
+		.video-js .vjs-load-progress {
+			background: #bfc7d3;
+			background: rgba(115, 133, 159, 0.5);
+		}
+
+		.video-js .vjs-load-progress div {
+			background: white;
+			background: rgba(115, 133, 159, 0.75);
+		}
+
+	</style>
+</head>
+
+<body>
+	
+	<section>
+
+			<div class="section1-top">
+					<div class="caption" >
+						<div class="part"><img src="images/qiu.png" width="180px">
+							<div id="line-left" ></div>
+							<div id="line-right" ></div>
+						</div>
+					</div>
+			</div>
+
+			<div class="section A">
+					<p>五月末的北京，太阳用不知疲倦的炙烤宣示着炎夏的来临。下午三点，室外仍然酷热难耐，阳光把球场的草皮灼得发烫，也蒸腾出青草的阵阵沁香。16岁的苏铮和伙伴们鱼贯而入，围拢到教练身边，听取训练安排。</p>
+			
+					<p>这是他来到“国安班”的第十个月；</p>
+					<p>这是他踢足球的第十年。</p>
+					
+			</div>
+
+			<div class="chapter">
+						<div class="fancy-header"><span>Chapter 1</span></div>
+						<div class="fancy-header2">
+						    <h2>启蒙</h2>
+						</div>
+			</div>
+
+			<div class="section">
+					<p>苏铮出生在一个球迷家庭，父亲是北京国安的铁杆粉丝，热爱足球的父亲也给了幼年苏铮最初的足球启蒙。</p>
+					<div data-aos="fade-up">
+						<img src="images/xx1.png">
+					</div>
+					<div data-aos="fade-up">
+						<img src="images/xx2.png">
+					</div>
+					<div data-aos="fade-up">
+						<img src="images/xx3.png">
+					</div>
+					<div data-aos="fade-up">
+						<img src="images/xx4.png">
+					</div>
+					<div data-aos="fade-up">
+						<img src="images/xx5.png">
+					</div>
+					<p>进入俱乐部是半职业化训练的开端。每天放学后，当其他同学或嬉闹玩耍或匆匆回家时，苏铮都要来到球场，和俱乐部里同年龄段的佼佼者一起训练两小时，这样的日子持续了两年。初二时，在比赛中屡屡送出优异表现的苏铮听从了教练的建议，决定走上职业化道路。</p>
+					
+			</div>
+			
+			<div class="chapter">
+					<div class="fancy-header"><span>Chapter 2</span></div>
+					<div class="fancy-header2">
+					<h2>相遇</h2>
+					</div>
+				</div>
+			
+			<div class="section">
+					<p>2017年的7月25日，北京中赫国安U16梯队正式组建。U16主教练、前国脚翟飙介绍，U16梯队的球员来源广泛，既有像苏铮这样土生土长的北京孩子，也有来自全国各地的足球苗子：</p>
+					<div id="container" style="height: 600px;width:100%;background:white;margin:20px 0 0;" data-aos="fade-down"></div>
+					<p>来自五湖四海的队员一方面增加了球队的包容性，另一方面，球员们正值十五六岁的年纪，天性的好动与地域的差异让队员间难免产生摩擦，这也对球队管理提出了挑战。</p>
+					<p>“刚来北京时普通话说得不好，都讲自己的方言，互相听不懂，也老吵架。”谈到初来乍到时和队友闹出的不愉快，来自湖北的刘石开不好意思地挠了挠头。如今队伍的融洽氛围得来不易，建队以来气氛的变化都要归功于主教练、被尊称为“翟指”的翟飙。</p>
+					<div class="zhujiaolian"><video    class="video-js vjs-default-skin video-scrollplay" controls data-setup="{}">
+							<source src="video/zhujiaolian.mp4" type="video/mp4">
+						  </video></div>
+					<div class="shipinzi"><p>如今队伍的融洽氛围得来不易，建队以来气氛的变化都要归功于主教练、被尊称为“翟指”的翟飙。<br>谈到队伍人员构成的多元，翟指说：“用毛主席的话来讲，我们是从五湖四海走到一起来的。”</p></div>
+			</div>
+			
+			
+			
+			
+			<div class="chapter">
+				<div class="fancy-header"><span>Chapter 3</span></div>
+				<div class="fancy-header2">
+				<h2>征战</h2>
+				</div>
+			</div>
+			
+			<div class="section">
+				<div id="sanlie"><img src="images/sanlie.png"></div>
+				<div class="suzhengshu clearfix">
+				<div class="shipinzi2"><p>对于一支刚刚成立十个月的队伍而言，取得这样的战绩已属不易。即使是数月之后，苏铮依然能够清晰地忆起比赛的细节。谈起自己作为“关键先生”的表现，小伙子笑得很是灿烂，欣喜与自豪溢于言表：</p><p>“有两场关键比赛都是对阵长春亚泰。第一次是60多分钟时我替补上场，我进了球，1-0领先，后来1-1被对方扳平了，到了80多分钟时，我传中导致对方乌龙，最后2-1胜利。”</p></div>
+				<div class="suzheng" data-aos="fade-left"><img src="images/suzhengshu.jpg" width="180"></div>
+			</div>
+				<p>之后，2018全国青少年足协杯赛U16组，北京中赫国安U16再一次遭遇长春亚泰。对于中赫国安而言，这是一场输不起的比赛——一旦输球，中赫国安将失去本区的决赛资格，被降级至下半区。因此，中赫国安迫切地需要一场胜利来保住席位，如不能直取胜利而是被迫点球决胜负，极大的不确定性无疑会为前途蒙上一层阴影。
+					不知是否由于这是场决定命运的比赛而让队员们背负了过多压力，赛场上，两队都迟迟未能打开局面，眼看时间将尽，而双方门前依旧固若金汤。直到第87分钟，苏铮一脚破门送上绝杀，帮助中赫国安顺利留在了上半区。
+					</p>
+				<P>翟指还比较满意弟子们的表现，但也承认与强队仍存差距：“（在全国范围内比较），我们的队伍现在处在中游的位置，毕竟我们组队的时间稍晚一些。国内的其他球队，组队时间长的都已经有四五年了，而我们只有十个月，现在还在追赶。”</p>
+					<p>翟指对队员们的训练和生活各方面都十分严格：“比如要求你做到百分之百的冲刺，你来80%都是不可以的。在训练场上，就是要令行禁止。足球是什么？是和平年代的战争，下达命令就要执行。”
+					</P>
+					<div class="jinqiu"><video  width="900"  class="video-js vjs-default-skin video-scrollplay" controls data-setup="{}">
+							<source src="video/jinqiu.mp4" type="video/mp4">
+						  </video></div>
+			
+				</div>
+			
+			<div class="chapter">
+				<div class="fancy-header"><span>Chapter 4</span></div>
+				<div class="fancy-header2">
+				<h2>逐梦</h2>
+				</div>
+			</div>
+			
+			
+			
+			<div class="section" >
+				
+				<p class="fengge">“我踢球的风格偏南美，非常喜欢内马尔。”——苏铮</p>
+					<p class="fengge">“受伤时很着急，怕（因此）踢不到职业俱乐部。”——刘石开</p>
+					<p class="fengge">“回家时间很少，也很想家。但是走职业（路线），必须克服。”——贾昕岳</p>		
+				
+				<p>“国安班”的每一名小球员都有一个球星梦，教练也期望着从这里能够走出未来的足球明星。然而逐梦之路注定道阻且长，等待他们的不仅是技术的磨砺、也有伤病的折磨与心理的考验。</p>
+				
+			
+			<div class="fenlan">
+				<div class="row">
+					<div class="one_half"><blockquote><p id="chang">苏铮身披10号球衣——贝利、马拉多纳、普拉蒂尼、巴乔，这些伟大的名字让绿茵场上10号的意义变得与众不同——代表了整个球队的灵魂和核心。“刚开始踢前腰，后来以为跑得太快了就踢边锋了。”</p>
+					</blockquote></div>
+					<div class="one_half last"data-aos="zoom-in">
+							<img src="images/suzheng.jpg" >
+					</div>
+				</div>
+				
+			
+				<div class="row">
+						<div class="one_half"><blockquote><p>刘石开曾忍受伤病的折磨，长期训练让他的左膝半月板二级磨损。当时他正处在由业余转职业的关键期，一个月的恢复期显得格外漫长与灰暗：“没有专业的队医，怕伤好了踢不上球，在家也发脾气。”即使后来成功转入职业梯队，伤病的影响仍然如影随形。</p>
+						</blockquote></div>
+						<div class="one_half last2"data-aos="zoom-in">
+								<img src="images/liushikai.jpg" width="330px" >
+						</div>
+					</div>
+				
+					<div class="row">
+							<div class="one_half"><blockquote><p>对于背井离乡、从沈阳来到北京踢球的贾昕岳而言，同龄人享受的家庭欢乐则成为了奢望。“大部分时间都在北京，如果俱乐部放假或者是需要回家办手续，才可以回家。”被问及是否想家时，爽朗的贾昕岳答道：“肯定会想。但是走职业（路线），必须克服。国安是个很大的平台，自己选择了，不能因为想家而放弃。”</p>
+							</blockquote></div>
+							<div class="one_half last3"data-aos="zoom-in">
+								<img src="images/jiaxinyue.jpg" width="330px" >
+							</div>
+						</div>
+			 </div>
+			
+			</div>
+	</section>
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	
+	
+</body>
+
+<script type="text/javascript">
+	// 全国省份列表
+	var dataMap = [
+		{
+			name: '北京',
+			tooltip: '<p style="font-size:18px">北京</p><p style="font-size:14px">100名队员来自北京47中、北京朝阳体校和回民中学。</p>'
+		},
+		{
+			name: '重庆',
+			tooltip: '<p style="font-size:18px">重庆</p><p style="font-size:14px">一名球员来自重庆。</p>'
+		},
+		{
+			name: '湖北',
+			tooltip: '<p style="font-size:18px">湖北</p><p style="font-size:14px">一名球员来自湖北。</p>'
+		},
+		{
+			name: '广东',
+			tooltip: '<p style="font-size:18px">广东</p><p style="font-size:14px">五名队员来自广州恒大足球学校。</p>'
+		},
+		{
+			name: '辽宁',
+			tooltip: '<p style="font-size:18px">辽宁</p><p style="font-size:14px">一名球员来自沈阳。</p>'
+		},
+		{ name: '天津' }, { name: '上海' },
+		{ name: '河北' }, { name: '河南' }, { name: '云南' },
+		{ name: '黑龙江' }, { name: '湖南' }, { name: '安徽' }, { name: '山东' }, { name: '新疆' }, { name: '江苏' }, { name: '浙江' }, { name: '江西' },
+		{ name: '广西' }, { name: '甘肃' }, { name: '山西' }, { name: '内蒙古' }, { name: '陕西' }, { name: '吉林' }, { name: '福建' }, { name: '贵州' },
+		{ name: '青海' }, { name: '西藏' }, { name: '四川' }, { name: '宁夏' }, { name: '海南' }, { name: '台湾' }, { name: '香港' }, { name: '澳门' }]
+	// 需要在页面上直接标记出来的城市
+	var specialMap = ['北京', '辽宁', '重庆', '广东', '湖北'];
+	// 对dataMap进行处理，使其可以直接在页面上展示
+	for (var i = 0; i < specialMap.length; i++) {
+		for (var j = 0; j < dataMap.length; j++) {
+			if (specialMap[i] == dataMap[j].name) {
+				dataMap[j].selected = true;
+				break;
+			}
+
+		}
+	}
+	// 绘制图表，准备数据
+	var option = {
+		tooltip: {
+			backgroundColor: "#1D6A54",//提示标签背景颜色
+			textStyle: { color: "#fff" } //提示标签字体颜色
+		},
+		series: [
+			{
+				name: '中国',
+				type: 'map',
+				mapType: 'china',
+				selectedMode: 'multiple',
+				label: {
+					normal: {
+						show: true,//显示省份标签
+						// textStyle:{color:"#c71585"}//省份标签字体颜色
+					},
+					emphasis: {
+						show: true,//对应的鼠标悬浮效果
+						textStyle:{color:"#000"}
+					}
+				},
+				itemStyle: {
+					normal: {
+						borderWidth: .5,//区域边框宽度
+						// borderColor: '#009fe8',//区域边框颜色
+						// areaColor:"#ffefd5",//区域颜色
+					},
+					emphasis: {
+						borderWidth: .5,
+						borderColor: '#2E8B57',
+						areaColor: "rgb(145,180,147)",
+					}
+				},
+				data: dataMap
+			}
+		]
+	};
+	//初始化echarts实例
+	var myChart = echarts.init(document.getElementById('container'));
+	//使用制定的配置项和数据显示图表
+	myChart.setOption(option);
+
+	myChart.on("mouseover", function (params){ 
+        myChart.setOption(option);
+	});
+</script>
+
+</html>
